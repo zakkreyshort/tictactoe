@@ -1,0 +1,22 @@
+table#game, .names {
+  display: none;
+}
+
+tr {
+  height: 250px;
+}
+
+td {
+  width: 250px;
+  border: 1px solid black;
+  font-size: xx-large;
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
