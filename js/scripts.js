@@ -3,29 +3,29 @@ function Player(name, mark){
   this.mark = mark;
 }
 
-var checkWinX = function() {
-  if ((space1.mark === space2.mark && space1.mark === space3.mark && space1.mark === "X") || (space4.mark === space5.mark && space4.mark === space6.mark && space4.mark === "X") || (space7.mark === space8.mark && space7.mark === space9.mark && space7.mark === "X") || (space1.mark === space4.mark && space1.mark === space7.mark && space1.mark === "X") || (space2.mark === space5.mark && space2.mark === space8.mark && space2.mark === "X") || (space3.mark === space6.mark && space3.mark === space9.mark && space3.mark === "X") || (space1.mark === space5.mark && space1.mark === space7.mark && space1.mark === "X") || (space3.mark === space5.mark && space3.mark === space7.mark && space3.mark === "X")) {
-    alert("X wins!");
+// Front-end logic:
+
+var checkWinX = function(){
+  if ((($("#a").html() === "X") && ($("#a").html() === $("#b").html()) && ($("#a").html() === $("#c").html()))  || (($("#d").html() === "X") && ($("#d").html() === $("#e").html()) && ($("#d").html() === $("#f").html()))  || (($("#g").html() === "X") && ($("#g").html() === $("#h").html()) && ($("#g").html() === $("#i").html()))  || (($("#a").html() === "X") && ($("#a").html() === $("#d").html()) && ($("#a").html() === $("#g").html()))  || (($("#b").html() === "X") && ($("#b").html() === $("#e").html()) && ($("#b").html() === $("#h").html()))  || (($("#c").html() === "X") && ($("#c").html() === $("#f").html()) && ($("#c").html() === $("#i").html()))  || (($("#a").html() === "X") && ($("#a").html() === $("#e").html()) && ($("#a").html() === $("#i").html()))  || (($("#c").html() === "X") && ($("#c").html() === $("#e").html()) && ($("#c").html() === $("#g").html())))  {
+    alert("X Wins!");
   } else {
     return false;
   }
 }
 
-var checkWinO = function() {
-  if ((space1.mark === space2.mark && space1.mark === space3.mark && space1.mark === "O") || (space4.mark === space5.mark && space4.mark === space6.mark && space4.mark === "O") || (space7.mark === space8.mark && space7.mark === space9.mark && space7.mark === "O") || (space1.mark === space4.mark && space1.mark === space7.mark && space1.mark === "O") || (space2.mark === space5.mark && space2.mark === space8.mark && space2.mark === "O") || (space3.mark === space6.mark && space3.mark === space9.mark && space3.mark === "O") || (space1.mark === space5.mark && space1.mark === space7.mark && space1.mark === "O") || (space3.mark === space5.mark && space3.mark === space7.mark && space3.mark === "O")) {
-    alert("O wins!");
+var checkWinO = function(){
+  if ((($("#a").html() === "O") && ($("#a").html() === $("#b").html()) && ($("#a").html() === $("#c").html()))  || (($("#d").html() === "O") && ($("#d").html() === $("#e").html()) && ($("#d").html() === $("#f").html()))  || (($("#g").html() === "O") && ($("#g").html() === $("#h").html()) && ($("#g").html() === $("#i").html()))  || (($("#a").html() === "O") && ($("#a").html() === $("#d").html()) && ($("#a").html() === $("#g").html()))  || (($("#b").html() === "O") && ($("#b").html() === $("#e").html()) && ($("#b").html() === $("#h").html()))  || (($("#c").html() === "O") && ($("#c").html() === $("#f").html()) && ($("#c").html() === $("#i").html()))  || (($("#a").html() === "O") && ($("#a").html() === $("#e").html()) && ($("#a").html() === $("#i").html()))  || (($("#c").html() === "O") && ($("#c").html() === $("#e").html()) && ($("#c").html() === $("#g").html())))  {
+    alert("O Wins!");
   } else {
     return false;
   }
 }
 
 var checkTie = function (){
-  if(checkWinO(space1, space2, space3, space4, space5, space6, space7, space8, space9) === false && checkWinX(space1, space2, space3, space4, space5, space6, space7, space8, space9) === false && (space1 === "X" || "O") && (space2 === "X" || "O") && (space3 === "X" || "O") && (space4 === "X" || "O") && (space5 === "X" || "O") && (space6 === "X" || "O") && (space7 === "X" || "O") && (space8 === "X" || "O") && (space9 === "X" || "O")){
+  if (checkWinO() === false && checkWinX() === false && (($("#a").html() === "X" || $("#a").html() === "O") && ($("#b").html() === "X" || $("#b").html() === "O") && ($("#c").html() === "X" || $("#c").html() ===  "O") && ($("#d").html() === "X" || $("#d").html() === "O") && ($("#e").html() === "X" || $("#e").html() === "O") && ($("#f").html() === "X" || $("#f").html() === "O") && ($("#g").html() === "X" || $("#g").html() === "O") && ($("#h").html() === "X" || $("#h").html() === "O") && ($("#i").html() === "X" || $("#i").html() === "O"))) {
     alert("It's a tie!");
   }
 }
-
-// Front-end logic:
 
 $(document).ready(function(){
   $("form").submit(function(event) {
@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     $("table#game").on('click', 'td', function(event) {
       event.preventDefault();
-      if ($(this).html("")) {
+      if ($(this).html() === "") {
         if (turn %2 === 0) {
           $(this).html(player2.mark);
           turn++
