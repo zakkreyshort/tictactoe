@@ -7,7 +7,9 @@ function Player(name, mark){
 
 var checkWinX = function(){
   if ((($("#a").html() === "X") && ($("#a").html() === $("#b").html()) && ($("#a").html() === $("#c").html()))  || (($("#d").html() === "X") && ($("#d").html() === $("#e").html()) && ($("#d").html() === $("#f").html()))  || (($("#g").html() === "X") && ($("#g").html() === $("#h").html()) && ($("#g").html() === $("#i").html()))  || (($("#a").html() === "X") && ($("#a").html() === $("#d").html()) && ($("#a").html() === $("#g").html()))  || (($("#b").html() === "X") && ($("#b").html() === $("#e").html()) && ($("#b").html() === $("#h").html()))  || (($("#c").html() === "X") && ($("#c").html() === $("#f").html()) && ($("#c").html() === $("#i").html()))  || (($("#a").html() === "X") && ($("#a").html() === $("#e").html()) && ($("#a").html() === $("#i").html()))  || (($("#c").html() === "X") && ($("#c").html() === $("#e").html()) && ($("#c").html() === $("#g").html())))  {
-    alert("X Wins!");
+    $("#winner").html("X wins!");
+    $("a").show();
+    $("table#game").off();
   } else {
     return false;
   }
@@ -15,7 +17,9 @@ var checkWinX = function(){
 
 var checkWinO = function(){
   if ((($("#a").html() === "O") && ($("#a").html() === $("#b").html()) && ($("#a").html() === $("#c").html()))  || (($("#d").html() === "O") && ($("#d").html() === $("#e").html()) && ($("#d").html() === $("#f").html()))  || (($("#g").html() === "O") && ($("#g").html() === $("#h").html()) && ($("#g").html() === $("#i").html()))  || (($("#a").html() === "O") && ($("#a").html() === $("#d").html()) && ($("#a").html() === $("#g").html()))  || (($("#b").html() === "O") && ($("#b").html() === $("#e").html()) && ($("#b").html() === $("#h").html()))  || (($("#c").html() === "O") && ($("#c").html() === $("#f").html()) && ($("#c").html() === $("#i").html()))  || (($("#a").html() === "O") && ($("#a").html() === $("#e").html()) && ($("#a").html() === $("#i").html()))  || (($("#c").html() === "O") && ($("#c").html() === $("#e").html()) && ($("#c").html() === $("#g").html())))  {
-    alert("O Wins!");
+    $("#winner").html("O wins!");
+    $("a").show();
+    $("table#game").off();
   } else {
     return false;
   }
@@ -23,7 +27,9 @@ var checkWinO = function(){
 
 var checkTie = function (){
   if (checkWinO() === false && checkWinX() === false && (($("#a").html() === "X" || $("#a").html() === "O") && ($("#b").html() === "X" || $("#b").html() === "O") && ($("#c").html() === "X" || $("#c").html() ===  "O") && ($("#d").html() === "X" || $("#d").html() === "O") && ($("#e").html() === "X" || $("#e").html() === "O") && ($("#f").html() === "X" || $("#f").html() === "O") && ($("#g").html() === "X" || $("#g").html() === "O") && ($("#h").html() === "X" || $("#h").html() === "O") && ($("#i").html() === "X" || $("#i").html() === "O"))) {
-    alert("It's a tie!");
+    $("#winner").html("It's a tie!");
+    $("a").show();
+    $("table#game").off();
   }
 }
 

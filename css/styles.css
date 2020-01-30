@@ -1,4 +1,18 @@
-table#game, .names {
+table#game {
+  margin-top: 20px;
+}
+
+.names h2 {
+  text-align: center;
+}
+
+a {
+  font-size: x-large;
+  text-align: center;
+  margin-top: 20px;
+}
+
+table#game, .names, a {
   display: none;
 }
 
@@ -18,5 +32,3 @@ button {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
-
