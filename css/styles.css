@@ -1,5 +1,18 @@
+body {
+  background: url(../img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
 table#game {
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.names {
+  margin-top: 10%;
 }
 
 .names h2 {
@@ -7,9 +20,13 @@ table#game {
 }
 
 a {
-  font-size: x-large;
+  font-size: xx-large;
   text-align: center;
+  font-weight: bold;
   margin-top: 20px;
+  background: -webkit-linear-gradient(rgb(12, 239, 255), rgb(3, 61, 252));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 table#game, .names, a {
@@ -22,13 +39,63 @@ tr {
 
 td {
   width: 250px;
-  border: 1px solid black;
   font-size: xx-large;
   text-align: center;
 }
 
-button {
-  width: 100px;
+td#a, td#b, td#d, td#e {
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+}
+
+td#c, td#f {
+  border-bottom: 3px solid black;
+}
+
+td#g, td#h {
+  border-right: 3px solid black;
+}
+
+button.btn {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 1px solid #111111;
+  background-color: #00FFFF;
+  color: #111111;
+}
+
+button.btn:hover {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #00FFFF;
+  background-color: #111111;
+  color: #00FFFF;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: 10%;
+  background-image: linear-gradient(45deg,rgb(136, 250, 250), rgb(215, 253, 253), #00FFFF);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+label {
+  font-size: large;
+  margin-top: 10px;
+}
+
+h2#name1 {
+  margin-left: 20px; 
+}
+
+h2#winner {
+  margin-right: 20px; 
+}
+
+form {
+  padding-left: 10%;
+  padding-right: 10%;
 }

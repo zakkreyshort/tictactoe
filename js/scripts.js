@@ -40,6 +40,7 @@ $(document).ready(function(){
     var player1 = new Player($("input#name1").val(), "X");
     var player2 = new Player($("input#name2").val(), "O");
     $("form").hide();
+    $(".jumbotron").hide();
     $("table#game").show();
     $(".names").show();
 
